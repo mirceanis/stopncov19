@@ -1,6 +1,7 @@
-# hello readme
+# Don't touch your face
 
-[index](docs/index.html)
-[about](docs/about.html)
+[live demo](https://mirceanis.github.io/stopncov19/index.html)
 
-<script>alert('readme');</script>
+This was built using code from https://teachablemachine.withgoogle.com/
+
+The punch sound comes from https://freesound.org/s/507131/
