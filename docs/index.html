@@ -47,6 +47,8 @@
         window.requestAnimationFrame(loop);
     }
 
+    let counter = 0;
+
     // run the webcam image through the image model
     async function predict() {
         // predict can take in an image, video or canvas html element
@@ -57,7 +59,14 @@
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
         if (prediction[0].probability > 0.95) {
+          counter++;
+        } else {
+          counter = 0;
+        }
+
+        if (counter > 10) {
           await beep();
+          counter = 0;
         }
     }
 
